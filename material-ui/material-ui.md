@@ -29,9 +29,18 @@ Icons are optional but fun to use and there is one for pretty much everything de
 - List for showing images in, euh, list: https://material-ui.com/components/lists/. Works great with icons or image, allow secondary text
 - ImageList for quick layout: https://material-ui.com/components/image-list/
 - Grid for general layouting when needed
-- Fab for the "+" floating like button: https://material-ui.com/components/floating-action-button/, in combination with basic styling:
+- Fab for the "+" floating like button: https://material-ui.com/components/floating-action-button/
+- Chips for tags: https://material-ui.com/components/chips/#chip
 
-```JavaScript
+## Styling 
+
+Material UI uses "CSS in JS" kind of way to style - ie, if you want to add some styling, for example to have a Fab button goes on the usual bottom/left floating position, you use:
+
+```javascript
+import { makeStyles } from "@material-ui/core/styles";
+...
+
+// Style I want for fab, can add more - it's just a JS object
 const useStyles = makeStyles({
   fab: {
     position: "fixed",
@@ -39,6 +48,16 @@ const useStyles = makeStyles({
     bottom: "10px",
   },
 });
-```
 
-- Chips for tags: https://material-ui.com/components/chips/#chip
+export default MyComponent(props) {
+  const classes = useStyles();
+  ...
+
+
+  return (
+    <Fab className={classes.fab} color="primary" aria-label="add">
+        <AddIcon />
+    </Fab>
+  )
+}
+```
