@@ -1,6 +1,6 @@
 # Pod Meta Data
 
-Until know we've been stricly using the folder structure to get our info. This should also work for ACL (as this concept is "Solid native") but may be limiting for:
+Until now we've been stricly using the folder structure to get our info. This should also work for ACL (as this concept is "Solid native") but may be limiting for:
 
 - Storing metadata (time, location, tags)
 - Querying
