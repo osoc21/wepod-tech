@@ -36,6 +36,8 @@ Icons are optional but fun to use and there is one for pretty much everything de
 
 Material UI uses "CSS in JS" kind of way to style - ie, if you want to add some styling, for example to have a Fab button goes on the usual bottom/left floating position, you use:
 
+Careful - CSS in JS follow JavaScript naming conventions, not CSS - so no dash, but camel case: `borderRadius`, not `border-radius`, `boxShadow`, not `box-shadow`, etc...
+
 ```javascript
 import { makeStyles } from "@material-ui/core/styles";
 ...
